@@ -16,8 +16,9 @@ function Dashboard() {
   } = useStock();
 
   return (
-    <div className="App">
+    <div className="app-container">
       <h1>PhexTech Market-Pulse</h1>
+      <p className="subtitle">Track real-time stock performance</p>
 
       <SearchBar
         query={query}
