@@ -16,4 +16,4 @@ app.include_router(stock_router)
 
 @app.get("/")
 def root():
-    return {"status": "Backend running cleanly"}
+    return {"status": "Market Pulse API running"}
