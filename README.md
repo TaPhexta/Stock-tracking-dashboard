@@ -26,7 +26,7 @@
 
 📦 Installation & Setup
 
-### 1. Backend Configuration
+ 1. Backend Configuration
 Navigate to the backend directory and set up your virtual environment:
 ```bash
 cd backend
@@ -37,3 +37,4 @@ venv\Scripts\activate
 source venv/bin/activate
 
 pip install -r requirements.txt
+**
