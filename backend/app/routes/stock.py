@@ -1,19 +1,20 @@
 from fastapi import APIRouter
-from app.services.alpha_vantage_service import fetch_stock
+from app.services.alpha_vantage_service import get_stock_data
+from app.utils.responses import success, error
 
 router = APIRouter()
 
 @router.get("/stock/{symbol}")
 def get_stock(symbol: str):
 
-    data = fetch_stock(symbol)
+    data = get_stock_data(symbol)
 
     if "Information" in data or "Note" in data:
         return {
             "symbol": symbol,
             "price": "RATE LIMIT",
             "change": "Wait 60s"
-        }
+        } 
 
     quote = data.get("Global Quote", {})
 
